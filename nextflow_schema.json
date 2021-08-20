@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "https://raw.githubusercontent.com/gwright99/nextflowtestwithschema/main/nextflow_schema.json",
-    "title": "gwright99/nextflow pipeline parameters",
+    "title": "Ipsem Lorem",
     "description": "Nextflow test with Schema.",
     "type": "object",
     "definitions": {
@@ -34,6 +34,14 @@
             },
             "fa_icon": "fas fa-barcode"
         }
-    }
+    },
+    "allOf": [
+        {
+            "$ref": "#/definitions/input_output_options"
+        },
+        {
+            "$ref": "#/definitions/umi_options"
+        }
+    ]
 }
      
