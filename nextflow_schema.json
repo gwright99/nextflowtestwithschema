@@ -69,13 +69,13 @@
 					"help_text": "Use to set an upper-limit for the time requirement for each process. Should be a string in the format integer-unit e.g. `--max_time '2.h'`"
 				}
 			}
+		}
+	},
+	"allOf": [{
+			"$ref": "#/definitions/FIRST_OPTION_BLOC"
 		},
-		"allOf": [{
-				"$ref": "#/definitions/FIRST_OPTION_BLOC"
-			},
-			{
-				"$ref": "#/definitions/SECOND_OPTION_BLOC"
-			}
-		]
-	}
+		{
+			"$ref": "#/definitions/SECOND_OPTION_BLOC"
+		}
+	]
 }
