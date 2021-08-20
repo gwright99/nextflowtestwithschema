@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/gwright99/nextflowwithschema/master/nextflow_schema.json",
+    "$id": "https://raw.githubusercontent.com/gwright99/nextflowtestwithschema/master/nextflow_schema.json",
     "title": "gwright99/nextflow pipeline parameters",
     "description": "Nextflow test with Schema.",
     "type": "object",
