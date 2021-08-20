@@ -72,10 +72,10 @@
 		}
 	},
 	"allOf": [{
-			"$ref": "#/definitions/FIRST_OPTION_BLOC"
+			"$ref": "#/definitions/FIRST_OPTION_BLOCK"
 		},
 		{
-			"$ref": "#/definitions/SECOND_OPTION_BLOC"
+			"$ref": "#/definitions/SECOND_OPTION_BLOCK"
 		}
 	]
 }
