@@ -4,78 +4,12 @@
 	"title": "Ipsem Lorem",
 	"description": "Nextflow test with Schema.",
 	"type": "object",
-	"definitions": {
-		"FIRST_OPTION_BLOCK": {
-			"title": "1st",
-			"type": "object",
-			"fa_icon": "fas fa-terminal",
-			"description": "Define where the pipeline should find input data and save output data.",
-			"properties": {
-				"email": {
-					"type": "string",
-					"description": "Email address for completion summary.",
-					"help_text": "Set this parameter to your e-mail address to get a summary e-mail with details of the run sent to you when the workflow exits. If set in your user config file (`~/.nextflow/config`) then you don't need to specify this on the command line for every run.",
-					"pattern": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$",
-					"fa_icon": "fas fa-envelope"
-				},
-				"input": {
-					"type": "string",
-					"format": "file-path",
-					"mimetype": "text/csv",
-					"pattern": "^\\S+\\.csv$",
-					"schema": "assets/schema_input.json",
-					"description": "Path to comma-separated file containing information about the samples in the experiment.",
-					"help_text": "You will need to create a design file with information about the samples in your experiment before running the pipeline. Use this parameter to specify its location. It has to be a comma-separated file with 4 columns, and a header row. See [usage docs](https://nf-co.re/rnaseq/usage#samplesheet-input).",
-					"fa_icon": "fas fa-file-csv"
-				},
-				"outdir": {
-					"type": "string",
-					"description": "Path to the output directory where the results will be saved.",
-					"default": "./results",
-					"fa_icon": "fas fa-folder-open"
-				}
-			}
-		},
-		"SECOND_OPTION_BLOCK": {
-			"title": "2nd",
-			"type": "object",
-			"fa_icon": "fas fa-terminal",
-			"description": "Define where the pipeline should find input data and save output data.",
-			"properties": {
-				"max_cpus": {
-					"type": "integer",
-					"description": "Maximum number of CPUs that can be requested for any single job.",
-					"default": 16,
-					"fa_icon": "fas fa-microchip",
-					"hidden": true,
-					"help_text": "Use to set an upper-limit for the CPU requirement for each process. Should be an integer e.g. `--max_cpus 1`"
-				},
-				"max_memory": {
-					"type": "string",
-					"description": "Maximum amount of memory that can be requested for any single job.",
-					"default": "128.GB",
-					"fa_icon": "fas fa-memory",
-					"pattern": "^\\d+(\\.\\d+)?\\.?\\s*(K|M|G|T)?B$",
-					"hidden": true,
-					"help_text": "Use to set an upper-limit for the memory requirement for each process. Should be a string in the format integer-unit e.g. `--max_memory '8.GB'`"
-				},
-				"max_time": {
-					"type": "string",
-					"description": "Maximum amount of time that can be requested for any single job.",
-					"default": "240.h",
-					"fa_icon": "far fa-clock",
-					"pattern": "^(\\d+\\.?\\s*(s|m|h|day)\\s*)+$",
-					"hidden": true,
-					"help_text": "Use to set an upper-limit for the time requirement for each process. Should be a string in the format integer-unit e.g. `--max_time '2.h'`"
-				}
-			}
+	"properties": {
+		"email": {
+			"type": "string",
+			"description": "Email address for completion summary.",
+			"help_text": "Set this parameter to your e-mail address to get a summary e-mail with details of the run sent to you when the workflow exits. If set in your user config file (`~/.nextflow/config`) then you don't need to specify this on the command line for every run.",
+			"pattern": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
 		}
-	},
-	"allOf": [{
-			"$ref": "#/definitions/FIRST_OPTION_BLOCK"
-		},
-		{
-			"$ref": "#/definitions/SECOND_OPTION_BLOCK"
-		}
-	]
+	}
 }
